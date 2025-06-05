@@ -1,6 +1,6 @@
 #include "games/games.h"
 
-// Oyun listesi
+// Game list
 const char* GAMES[] = {
     "Battleship",
     "Tic-Tac-Toe",

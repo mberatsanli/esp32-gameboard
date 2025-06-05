@@ -1,6 +1,5 @@
 #include "display/display.h"
 
-// Global ekran nesnesi
 Adafruit_ILI9341 tft(TFT_CS, TFT_DC, TFT_RST);
 
 void initDisplay() {
@@ -28,11 +27,11 @@ void drawMenuItem(const char* text, int index, bool isSelected) {
 
     if (isSelected) {
         tft.fillRoundRect(x, y, w, h, 8, ILI9341_YELLOW);
-        drawCenteredText(text, y + 8, ILI9341_BLACK);  // Text pozisyonunu ayarla
+        drawCenteredText(text, y + 8, ILI9341_BLACK);  // Selected text
     } else {
         tft.fillRoundRect(x, y, w, h, 8, ILI9341_BLACK);
         tft.drawRoundRect(x, y, w, h, 8, ILI9341_WHITE);
-        drawCenteredText(text, y + 8, ILI9341_WHITE);  // Text pozisyonunu ayarla
+        drawCenteredText(text, y + 8, ILI9341_WHITE);  // Not selected text
     }
 }
 
