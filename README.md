@@ -23,23 +23,25 @@ ls /dev/tty.*
 
 ![ILI9341 Pin Connections](docs/images/hardware/ili9341-pins.png)
 
-| Pin name | Target Pin |
-| -------- | ---------- |
-| Led      | 3.3v       |
-| SCK      | D18        |
-| SDI      | D23        |
-| DC       | D2         |
-| Reset    | D4         |
-| CS       | D5         |
-| GND      | GND        |
-| VCC      | 3.3v       |
+| Pin name | Target Pin | GPIO |
+| -------- | ---------- | ---- |
+| Led      | 3.3v       | -    |
+| SCK      | D18        | GPIO18 |
+| SDI      | D23        | GPIO23 |
+| DC       | D2         | GPIO2  |
+| Reset    | D4         | GPIO4  |
+| CS       | D5         | GPIO5  |
+| GND      | GND        | -    |
+| VCC      | 3.3v       | -    |
+
+![ESP32 GPIO Pins](docs/images/hardware/ESP32-GPIO-Pins.webp)
 
 ### Button Controls
 
 #### Navigation Buttons
-- **Up Button**: D12
-- **Down Button**: D13
-- **Action Button**: D14
+- **Up Button**: D12 (GPIO12)
+- **Down Button**: D13 (GPIO13)
+- **Action Button**: D14 (GPIO14)
 
 ## Development
 
