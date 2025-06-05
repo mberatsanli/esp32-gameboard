@@ -1,20 +1,24 @@
 #include <Arduino.h>
-#include "screen.h"
-#include "menu.h"
-#include "wifi_utils.h"
+#include "display/display.h"
+#include "button_handler.h"
+#include "screens/screen_manager.h"
 
 void setup() {
-  Serial.begin(115200);
-  delay(1000);
-  Serial.println("ESP32 - Game Console initiliazed...");
+    Serial.begin(115200);
+    delay(1000);
+    Serial.println("ESP32 - Game Board initialized...");
 
-  showBootScreen();
-  checkWiFiConnection();
-
-  changeScreen(SCREEN_MENU);
+    // Initialize display
+    initDisplay();
+    
+    // Show main menu
+    screenManager.init();
 }
 
 void loop() {
-  handleScreenState();
-  delay(1000);
+    // Update screen
+    screenManager.loop();
+    
+    // Small delay
+    delay(100);
 }

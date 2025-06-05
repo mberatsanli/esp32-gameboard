@@ -1,6 +1,5 @@
 #include <Arduino.h>
 #include "games/pong.h"
-#include "screen.h"
 
 void runGamePong() {
   Serial.println("🏓 Pong Oyunu Başladı!");
@@ -18,5 +17,5 @@ void runGamePong() {
   }
 
   Serial.println("Pong oyunu sona erdi.");
-  changeScreen(SCREEN_MENU);
+  // changeScreen(SCREEN_MENU);
 }

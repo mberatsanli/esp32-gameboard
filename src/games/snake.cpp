@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include "games/snake.h"
-#include "screen.h"
+// #include "screen.h"
 
 void runGameSnake() {
   Serial.println("🐍 Snake Oyunu Başladı!");
@@ -18,5 +18,5 @@ void runGameSnake() {
   }
 
   Serial.println("Snake oyunu sona erdi.");
-  changeScreen(SCREEN_MENU);
+  // changeScreen(SCREEN_MENU);
 }
