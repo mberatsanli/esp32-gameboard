@@ -3,18 +3,32 @@
 
 #include "screens/screen.h"
 #include "button_handler.h"
+#include "network_manager.h"
 
 class SplashScreen : public Screen {
-private:
+  private:
     unsigned long startTime;
-    static const unsigned long SPLASH_DURATION = 3000; // 3 saniye
+    static const unsigned long SPLASH_DURATION = 3000;
     int loadingProgress;
-    
-    // TODO: WiFi connection check
-    // TODO: System checks
-    // TODO: Other initialization processes
 
-public:
+    enum LoadingStep {
+        CHECK_SYSTEM,
+        CHECK_DISPLAY,
+        CHECK_BUTTONS,
+        CHECK_NETWORK,
+        DONE
+    };
+
+    LoadingStep currentStep;
+    const char* stepMessages[5] = {
+        "Checking System...",
+        "Initializing Display...",
+        "Testing Buttons...",
+        "Checking Network...",
+        "Ready!"
+    };
+
+  public:
     SplashScreen();
     void init() override;
     void loop() override;
