@@ -3,13 +3,12 @@
 
 #include "screens/screen.h"
 #include "button_handler.h"
-#include "games/games.h"
 
 class GamesScreen : public Screen {
-private:
+  private:
     int selectedItem;
 
-public:
+  public:
     GamesScreen();
     void init() override;
     void loop() override;

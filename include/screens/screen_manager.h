@@ -10,7 +10,7 @@
 // #include "screens/settings_screen.h"
 
 class ScreenManager {
-private:
+  private:
     Screen* currentScreen;
     MainScreen mainScreen;
     GamesScreen gamesScreen;
@@ -19,11 +19,11 @@ private:
     SplashScreen splashScreen;
     // SettingsScreen settingsScreen;
 
-public:
+  public:
     ScreenManager();
     void init();
     void loop();
-    
+
     void showMainScreen();
     void showGamesScreen();
     void showGameScreen(int game);

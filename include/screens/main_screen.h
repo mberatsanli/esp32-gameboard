@@ -5,12 +5,12 @@
 #include "button_handler.h"
 
 class MainScreen : public Screen {
-private:
+  private:
     int selectedItem;
     const char* menuItems[3] = {"Play", "Credits", "Settings"};
     const int itemCount = 3;
 
-public:
+  public:
     MainScreen();
     void init() override;
     void loop() override;
