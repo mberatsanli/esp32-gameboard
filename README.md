@@ -21,6 +21,8 @@ ls /dev/tty.*
 
 ### LCD ILI9341 Display
 
+![ILI9341 Pin Connections](docs/images/hardware/ili9341-pins.png)
+
 | Pin name | Target Pin |
 | -------- | ---------- |
 | Led      | 3.3v       |
