@@ -39,3 +39,11 @@ void updateMenuSelection(int previous, int current, const char** items, int item
     drawMenuItem(items[previous], previous, false);
     drawMenuItem(items[current], current, true);
 }
+
+void drawTitle(const char* text) {
+    // Clear the top area where the title will be drawn
+    tft.fillRect(0, 0, tft.width(), 40, ILI9341_BLACK);
+    
+    // Draw the title centered at the top
+    drawCenteredText(text, 20, ILI9341_WHITE, 2);
+}

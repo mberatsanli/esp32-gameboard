@@ -18,5 +18,6 @@ void initDisplay();
 void drawCenteredText(const char* text, int y, uint16_t color, uint8_t size = 2);
 void drawMenuItem(const char* text, int index, bool isSelected);
 void updateMenuSelection(int previous, int current, const char** items, int itemCount);
+void drawTitle(const char* text);
 
 #endif
