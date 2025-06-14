@@ -42,6 +42,8 @@ ls /dev/tty.*
 - **Up Button**: D12 (GPIO12)
 - **Down Button**: D13 (GPIO13)
 - **Action Button**: D14 (GPIO14)
+- **Left Button**: D27 (GPIO27)
+- **Right Button**: D26 (GPIO26)
 
 ## Development
 
